@@ -1,0 +1,266 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--white: #efefef;
+	--black: #222;
+	--grey: #eee;
+
+	--primary-color: purple;
+	--secondary-color: red;
+
+	--f-normal: 400;
+	--f-bold: 600;
+	--f-bolder: 700;
+}
+
+body {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	color: var(--black);
+	background-color: var(--grey);
+}
+
+main {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center-h {
+	display: flex;
+	justify-content: center;
+}
+
+.center-v {
+	display: flex;
+	align-items: center;
+}
+
+.username {
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+i {
+	font-size: 1.6rem;
+}
+/* End Global Rules */
+
+
+
+/* Start Navigation Bar */
+nav {
+	display: flex;
+	flex-direction: column;
+	gap: 2.2rem;
+	grid-row: 1 / 3;
+	min-width: 300px;
+	padding: 1rem;
+	color: var(--white);
+	background-color: var(--primary-color);
+	z-index: 99;
+}
+
+nav .page-name {
+	color: var(--white);
+	user-select: none;
+}
+
+nav .page-name i {
+	font-size: 3rem;
+	padding-right: 1rem;
+}
+
+nav .nav-links {
+	display: grid;
+	gap: .8rem;
+	font-size: 1.3rem;
+	font-weight: var(--f-bold);
+	padding: 0 .7rem;
+}
+
+nav .nav-links i {
+	padding-right: 1.6rem;
+}
+
+nav a {
+	display: flex;
+	align-items: center;
+	color: var(--white);
+}
+/* End Navigation Bar */
+
+
+
+/* Start Header */
+header {
+	padding: 1rem 3rem;
+	display: grid;
+	gap: 2rem;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+	background-color: #fff;
+}
+
+/* Start Upper Section */
+header .upper .search-wrapper {
+	gap: 1rem;
+	flex: 1;
+}
+
+header .upper .search-wrapper i {
+	font-size: 1.4rem;
+}
+
+header .upper .search-wrapper input {
+	font-size: 18px;
+	min-width: min(32rem, 80%);
+	padding: .1rem .8rem;
+	border: none;
+	border-radius: 1rem;
+	background-color: var(--grey);
+}
+
+header .upper .search-wrapper input:focus {
+	outline: 2px solid var(--primary-color);
+}
+
+header .upper .user-stats {
+	padding: 0 1rem;
+	gap: 2rem;
+}
+
+header .upper .user-stats img {
+	width: 3rem;
+}
+/* End Upper Section */
+
+/* Start Lower Section */
+header .lower {
+	font-weight: var(--f-bold);
+}
+
+header .lower .user-info {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1rem;
+	flex: 1;
+}
+
+header .activities {
+	display: flex;
+	gap: 1rem;
+}
+
+header .activities li {
+	text-align: center;
+	padding: .5rem 1rem;
+	width: 6rem;
+	color: var(--white);
+	background-color: var(--primary-color);
+	border-radius: 2rem;
+	cursor: pointer;
+	user-select: none;
+}
+/* End Lower Section */
+/* End Header */
+
+
+
+/* Start Work Area Section */
+section.work-area {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	padding: 2rem 1rem;
+}
+
+/* Start Projects Section */
+.projects {
+	flex: 3;
+}
+.projects-cards-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+	gap: 1rem;
+}
+
+.projects-cards-grid .card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 200px;
+	padding: 2rem 1rem;
+	background-color: #fff;
+	border-left: 6px solid var(--secondary-color);
+	border-radius: .5rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+}
+
+.projects-cards-grid .card .action-buttons-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+}
+/* End Projects Section */
+
+/* Start Announcements & Trending Sections */
+.announcements-and-trending {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	flex: 1;
+	min-width: 300px;
+}
+
+.trending ul,
+.announcements ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	background-color: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+	padding: 2rem;
+	border-radius: .5rem;
+}
+
+.announcements ul > li.line-seperator {
+	border: 1px solid var(--grey);
+	padding: 0;
+}
+
+.announcements ul > li {
+	padding: .5rem;
+}
+
+.announcements ul > li p:last-child {
+	font-size: .9rem;
+}
+
+.trending ul {
+	gap: 2rem;
+}
+
+.trending ul > li {
+	gap: 1rem;
+}
+
+.trending ul > li img {
+	width: 3rem;
+}
+/* End Announcements & Trending Sections */
+/* Start Work Area Section */
